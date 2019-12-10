@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
+   
+    <title>Portfolio</title>
+</head>
+<body>
+    <div id="backdrop"></div>
+        <div class="contact_page">
+                <nav class="nav">
+                 
+                        <div class="nav_logo"> 
+                           <img src="images/xenia_logo.jpg" />
+                           <h2>Xenia Galaktionova</h2>
+                           <h3>Web developer</h3>
+                        </div>
+                        
+                        
+                        <ul class="menu">
+                          <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                            <li><a href="/about_me.html"><i class="fa fa-user-o"></i> About me</a></li>
+                            <li><a href="/resume.html"><i class="fa fa-file-text-o"></i> Resume</a></li>
+                            <li class="active"><a href="/portfolio.html"><i class="fa fa-briefcase"></i> Portfolio</a></li>
+                            <li><a href="/contact.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
+                        </ul>
+                        <div class="nav_footer">
+                            <ul class="social">
+                                <li><a href=""><i class="fa fa-github"></i></a></li>
+                                <li> <a href=""><i class="fa fa-linkedin"></i></a> </li> 
+                                <li> <a href=""><i class="fa fa-instagram"></i></a> </li> 
+                            </ul>
+                        </div>
+                
+                </nav>
+                
+                
+                <main id="swup" class="transition-fade">
+
+               <div class="page">
+                   <div class="subpage">
+                    <div class="section_title">Portfolio</div>  
+
+                  <div class="burger-menu">
+                    <input type="checkbox" name="toggle" id="menu" class="toggleMenu">
+                    <label for="menu" class="toggleMenu"><i class="fa fa-bars"></i>Menu</label>
+
+                    <ul class="menu">
+                      <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                      <li><a href="/about_me.html"><i class="fa fa-user-o"></i> About me</a></li>
+                      <li><a href="/resume.html"><i class="fa fa-file-text-o"></i> Resume</a></li>
+                      <li class="active"><a href="/portfolio.html"><i class="fa fa-briefcase"></i> Portfolio</a></li>
+                      <li><a href="/contact.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
+                    </ul>
+                  </div>
+        
+                            <div class="portfolio_">
+                            <div class="button-group filters-button-group">
+                              <button class="button is-checked" data-filter="*">All</button>
+                              <button class="button" data-filter=".website">Website</button>
+                              <button class="button" data-filter=".mobile">Mobile App</button>
+                              <button class="button" data-filter=".react">React JS</button>
+                             
+                            </div>
+                        
+                            <div class="grid">
+                             <div class="grid-content">
+                              <div class="element-item website tiles">
+                                    <a class="tile" href="https://xenia19.github.io/dacha-tyumen/" target="_blank"> <img src="images/dacha.png" alt="">
+                                        <div class="details"><span class="title"> Landing page "Summer house"</span>
+                                            <span class="info">HTML5, CSS3, JavaScript</span></div></a></div>
+                                  
+                                            <div class="element-item website tiles">
+                                                    <a class="tile" href="https://www.curso-de-ruso.com" target="_blank"> <img src="images/ruso.png" alt="">
+                                                        <div class="details"><span class="title">Website to learn Russian</span>
+                                                          <span class="info">Wordpress, Moodle</span></div></a></div>
+
+
+                                            <div class="element-item react mobile tiles">
+                                                            <a class="tile"> <img src="images/tennisapp.png" alt="">
+                                                                <div class="details"><span class="title">Mobile Booking App "Tennis centre"</span>
+                                                                  <span class="info">React JS</span></div></a></div>
+                                                        </div>      </div>
+                        </div>
+                    
+              </div>
+                </div>
+                </main>
+                </div>
+
+
+
+         
+                   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>                 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox-plus-jquery.min.js"></script>
+<script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+
+<script>
+
+// init Isotope
+var iso = new Isotope( '.grid', {
+  itemSelector: '.element-item',
+
+});
+
+// filter functions
+var filterFns = {
+  // show if number is greater than 50
+  numberGreaterThan50: function( itemElem ) {
+    var number = itemElem.querySelector('.number').textContent;
+    return parseInt( number, 10 ) > 50;
+  },
+  // show if name ends with -ium
+  ium: function( itemElem ) {
+    var name = itemElem.querySelector('.name').textContent;
+    return name.match( /ium$/ );
+  }
+};
+
+// bind filter button click
+var filtersElem = document.querySelector('.filters-button-group');
+filtersElem.addEventListener( 'click', function( event ) {
+  // only work with buttons
+  if ( !matchesSelector( event.target, 'button' ) ) {
+    return;
+  }
+  var filterValue = event.target.getAttribute('data-filter');
+  // use matching filter function
+  filterValue = filterFns[ filterValue ] || filterValue;
+  iso.arrange({ filter: filterValue });
+});
+
+// change is-checked class on buttons
+var buttonGroups = document.querySelectorAll('.button-group');
+for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
+  var buttonGroup = buttonGroups[i];
+  radioButtonGroup( buttonGroup );
+}
+
+function radioButtonGroup( buttonGroup ) {
+  buttonGroup.addEventListener( 'click', function( event ) {
+    // only work with buttons
+    if ( !matchesSelector( event.target, 'button' ) ) {
+      return;
+    }
+    buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
+    event.target.classList.add('is-checked');
+  });
+}
+
+</script>
+
+
+
+
+
+</body>
+</html>
