@@ -109,5 +109,4 @@ lightbox.option({
 })
 
 
-const swup = new Swup();
 
