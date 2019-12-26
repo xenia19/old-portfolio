@@ -1113,14 +1113,8 @@ html.is-animating .transition-fade {
   .container {
     width: 100%;
     height: 100%;
-    /* CSS Smooth Scroll */
     overflow-y: scroll; 
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+
   }
   
-  
-  section {
-    scroll-snap-align: center;
-  }
-  
+
