@@ -113,7 +113,7 @@
 <script>
 
 // init Isotope
-var iso = new Isotope( '.grid', {
+var $grid = $('.grid').isotope({
   itemSelector: '.element-item',
 
 });
@@ -164,10 +164,9 @@ function radioButtonGroup( buttonGroup ) {
   
 }
     
-iso.imagesLoaded().progress( function() {
-iso.isotope('layout');
+$grid.imagesLoaded().progress( function() {
+  $grid.isotope('layout');
 });  
-
 
 </script>
 
