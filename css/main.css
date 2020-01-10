@@ -368,7 +368,7 @@ position: relative;
     overflow: scroll;
 }
 
-#about_me_page {
+.about_me_page {
     display: grid;
     grid-template-columns: 200px 1fr;
     height: 100vh;
