@@ -115,6 +115,7 @@
 // init Isotope
 var $grid = $('.grid').isotope({
   itemSelector: '.element-item',
+  layoutMode : 'masonry'
 
 });
 
@@ -165,8 +166,8 @@ function radioButtonGroup( buttonGroup ) {
 }
     
 $grid.imagesLoaded().progress( function() {
-  $grid.isotope('layout');
-});  
+   $grid.isotope('layout');
+});
 
 </script>
 
