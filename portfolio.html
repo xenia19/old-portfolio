@@ -109,6 +109,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox-plus-jquery.min.js"></script>
 <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+<script src="https://npmcdn.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
 
 <script>
 
@@ -151,9 +152,9 @@ function radioButtonGroup( buttonGroup ) {
   });
 }
 
- $grid.imagesLoaded().progress(function() {
+ iso.imagesLoaded().progress(function() {
       setTimeout(function(){
-        $grid.isotope('layout');
+        iso.isotope('layout');
       },200);
     });
 
