@@ -165,6 +165,14 @@ function radioButtonGroup( buttonGroup ) {
     event.target.classList.add('is-checked');
   });
 }
+    
+ iso.imagesLoaded().progress(function() {
+      setTimeout(function(){
+       iso.isotope('layout');
+      },200);
+    });
+   
+    
 
 </script>
 
