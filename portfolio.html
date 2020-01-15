@@ -112,10 +112,12 @@
 
 <script>
 
+
+
+
 // init Isotope
-var $grid = $('.grid').isotope({
+var iso = new Isotope( '.grid', {
   itemSelector: '.element-item',
-  layoutMode : 'masonry'
 
 });
 
@@ -162,12 +164,7 @@ function radioButtonGroup( buttonGroup ) {
     buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
     event.target.classList.add('is-checked');
   });
-  
 }
-    
-$grid.imagesLoaded().progress( function() {
-   $grid.isotope('layout');
-});
 
 </script>
 
@@ -177,3 +174,4 @@ $grid.imagesLoaded().progress( function() {
 
 </body>
 </html>
+
