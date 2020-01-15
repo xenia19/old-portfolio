@@ -113,26 +113,53 @@
 <script>
 
 
-jQuery(document).ready(function ($) {
-    var $grid = $('.gallery-isotope').isotope({
-        itemSelector: '.gallery-item',
-        layoutMode: 'masonry'
-    });
+// init Isotope
+var iso = new Isotope( '.grid', {
+  itemSelector: '.element-item',
 
-    $grid.imagesLoaded().progress(function() {
+});
+
+
+// bind filter button click
+var filtersElem = document.querySelector('.filters-button-group');
+filtersElem.addEventListener( 'click', function( event ) {
+  // only work with buttons
+  if ( !matchesSelector( event.target, 'button' ) ) {
+    return;
+  }
+  var filterValue = event.target.getAttribute('data-filter');
+  // use matching filter function
+  filterValue = filterFns[ filterValue ] || filterValue;
+  iso.arrange({ filter: filterValue });
+});
+
+// change is-checked class on buttons
+var buttonGroups = document.querySelectorAll('.button-group');
+for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
+  var buttonGroup = buttonGroups[i];
+  radioButtonGroup( buttonGroup );
+}
+
+function radioButtonGroup( buttonGroup ) {
+  buttonGroup.addEventListener( 'click', function( event ) {
+    // only work with buttons
+    if ( !matchesSelector( event.target, 'button' ) ) {
+      return;
+    }
+    buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
+    event.target.classList.add('is-checked');
+  });
+}
+
+ $grid.imagesLoaded().progress(function() {
       setTimeout(function(){
         $grid.isotope('layout');
       },200);
     });
-});
-    
 
 </script>
-
-
-
-
+    
+  
 
 </body>
 </html>
-
