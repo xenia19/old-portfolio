@@ -30,14 +30,6 @@ html {
     scroll-behavior: smooth;
 }
 
-#home {
-	height: 800px
-}
-
-#about_me {
-	height: 800px
-}
-
 
 .main_phrase {
     position: relative;
