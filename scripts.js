@@ -1,5 +1,5 @@
 const instance = new TypeIt('#iam', {
-  strings: ['a Web Developer', 'a JS developer', 'a React developer', 'a traveler'],
+  strings: ['React Native Developer', 'JS developer', 'React developer', 'a traveler'],
   speed: 90,
   loop: true,
   nextStringDelay: 2500,
