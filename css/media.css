@@ -1,5 +1,11 @@
 
 @media(max-width:600px) {
+    html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
     .about_me_page {
         grid-template-columns: 1fr;
         height: 100vh;
@@ -20,6 +26,13 @@
 
 
 @media(max-width:900px) {
+
+    html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 
     .main_text {
     
