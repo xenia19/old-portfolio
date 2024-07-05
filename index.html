@@ -4,104 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Xenia: web developer</title>
 </head>
 <body>
-    
-        <div class="container">
-               
-                <section id="home">
-                       
-                        <div class="main_text">
-                                <div class="main_phrase">
-                                    <h1>Xenia:</h1>
-                                   <div><span>I am </span><span id="iam"></span></div>
-                                   <button> <a href="#about_me">Tell me more</a></button>
-                                </div>
+    <div class="container">
+        <section id="home">
+            <div class="main_text">
+                <div class="main_phrase">
+                    <h1>Xenia:</h1>
+                    <div><span>I am </span><span id="iam"></span></div>
+                    <button> <a href="#about_me">Tell me more</a></button>
+                </div>
+            </div>
+        </section>
+        <section id="about_me">
+            <div class="about_me_page">
+                <nav class="nav">
+                    <div class="nav_logo">
+                        <img src="images/xenia_logo.jpg" alt="Xenia Logo"/>
+                        <h2>Xenia Galaktionova</h2>
+                        <h3>JS developer</h3>
+                    </div>
+                    <ul class="menu">
+                        <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                        <li class="active"><a href="about_me.html"><i class="fa fa-user-o"></i> About me</a></li>
+                        <li><a href="resume.html"><i class="fa fa-file-text-o"></i> Resume</a></li>
+                        <li><a href="portfolio.html"><i class="fa fa-briefcase"></i> Portfolio</a></li>
+                        <li><a href="contact.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
+                    </ul>
+                    <div class="nav_footer">
+                        <ul class="social">
+                            <li><a href="https://github.com/xenia19"><i class="fab fa-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/ksenia-galaktionova-a60b30b0/"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://play.google.com/store/apps/developer?id=LaSiberia"><i class="fab fa-google-play"></i></a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="page">
+                    <div class="subpage">
+                        <div class="section_title">About me</div>
+                        <div class="burger-menu">
+                            <input type="checkbox" name="toggle" id="menu" class="toggleMenu">
+                            <label for="menu" class="toggleMenu"><i class="fa fa-bars"></i> Menu</label>
+                            <ul class="menu">
+                                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                                <li class="active"><a href="about_me.html"><i class="fa fa-user-o"></i> About me</a></li>
+                                <li><a href="resume.html"><i class="fa fa-file-text-o"></i> Resume</a></li>
+                                <li><a href="portfolio.html"><i class="fa fa-briefcase"></i> Portfolio</a></li>
+                                <li><a href="contact.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
+                            </ul>
                         </div>
-
-                </section>
-               
-                <section id="about_me">
-                   
-
-                        <div class="about_me_page">
-                                <nav class="nav">
-                                        <div class="nav_logo"> 
-                                           <img src="images/xenia_logo.jpg" />
-                                           <h2>Xenia Galaktionova</h2>
-                                           <h3>JS developer</h3>
-                                        </div>
-                                       
-                                        <ul class="menu">
-                                            <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-                                            <li class="active"><a href="about_me.html"><i class="fa fa-user-o"></i> About me</a></li>
-                                            <li><a href="resume.html"><i class="fa fa-file-text-o"></i> Resume</a></li>
-                                            <li><a href="portfolio.html"><i class="fa fa-briefcase"></i> Portfolio</a></li>
-                                            <li><a href="contact.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
-                                            </ul>
-                                    
-                                        <div class="nav_footer">
-                                            <ul class="social">
-                                              <li><a href="https://github.com/xenia19"><i class="fab fa-github"></i></a></li>
-                                <li> <a href="https://www.linkedin.com/in/ksenia-galaktionova-a60b30b0/"><i class="fab fa-linkedin"></i></a> </li> 
-                                <li> <a href="https://play.google.com/store/apps/developer?id=LaSiberia"><i class='fab fa-google-play'></i></a> </li> 
-                                            </ul>
-                                        </div>
-                                
-                                </nav>
-                                    
-                               
-                                <div class="page">
-                                        <div class="subpage">
-                                         <div class="section_title">About me</div>  
-                                         <div class="burger-menu">
-                                                 <input type="checkbox" name="toggle" id="menu" class="toggleMenu">
-                                                 <label for="menu" class="toggleMenu"><i class="fa fa-bars"></i>Menu</label>
-                             
-                                                 <ul class="menu">
-                                                    <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-                                                    <li class="active"><a href="about_me.html"><i class="fa fa-user-o"></i> About me</a></li>
-                                                    <li><a href="resume.html"><i class="fa fa-file-text-o"></i> Resume</a></li>
-                                                    <li><a href="portfolio.html"><i class="fa fa-briefcase"></i> Portfolio</a></li>
-                                                    <li><a href="contact.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
-                                                 </ul>
-                                               </div>
-                                               <div class="wrapper_about_me">
-                                                <div class="text_about_me">
-                                                    <p>Hi! My name is Xenia and I am a happy girl from Siberia, living in Sicily. 
-                                                            I have been creating websites for many years. 
-                                                        Then my hobby became a profession. I really love what I'm doing. I have experience with JS, React, React Native. I've developed 4 apps that you can find in my  <a class="tile" href="https://xenia19.github.io/portfolio/portfolio.html">portfolio</a>
-                                                                 and 1 telegram bot.
-                                                         </p>
-                                                </div>
-                                                <div class="fun_facts">
-                                                <div class="contact_title"><h2>Random facts about me</h2></div>  
-                                          <div class="fun_facts_icons">
-                                              <div class="fact_icon_1"><p>Traveled 36 countries.</p> <p>Lived 11 years abroad.</p> <img id="fact_pic_1" src="images/suitcase.png" alt=""> </div> 	
-                                              <div class="fact_icon_2"><p> Between coffee and tea </p> <p>I choose yerba mate.</p> <img id="fact_pic_2" src="images/mate.png" alt="">	</div>
-                                              <div class="fact_icon_3"><p>	I love making React applications.</p><br> <img id="fact_pic_3"  src="images/react.jpg" alt="">  </div>
-                                              <div class="fact_icon_4"><p>	Dogs are my big passion. </p><br> <img id="fact_pic_4" src="images/dog.png" alt=""> </div>
-                                          </div>
-                      
-                                                </div></div>
-                                       
-                       </div></div>
-
-                </section>
-               
-              </div>
-          
-           
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/6.0.3/typeit.min.js"></script>
-    
-   <script src="scripts.js"></script>
-  
-          </body>
-          </html>
+                        <div class="wrapper_about_me">
+                            <div class="text_about_me">
+                                <p>Hi! My name is Xenia and I am a happy girl from Siberia, living in Sicily. 
+                                    I have been creating websites for many years. 
+                                    Then my hobby became a profession. I really love what I'm doing. I have experience with JS, React, React Native. I've developed 4 apps that you can find in my  <a class="tile" href="https://xenia19.github.io/portfolio/portfolio.html">portfolio</a>
+                                    and 1 telegram bot.
+                                </p>
+                            </div>
+                            <div class="fun_facts">
+                                <div class="contact_title"><h2>Random facts about me</h2></div>
+                                <div class="fun_facts_icons">
+                                    <div class="fact_icon_1"><p>Traveled 36 countries.</p> <p>Lived 11 years abroad.</p> <img id="fact_pic_1" src="images/suitcase.png" alt="Suitcase"></div>
+                                    <div class="fact_icon_2"><p>Between coffee and tea</p> <p>I choose yerba mate.</p> <img id="fact_pic_2" src="images/mate.png" alt="Mate"></div>
+                                    <div class="fact_icon_3"><p>I love making React applications.</p><br> <img id="fact_pic_3" src="images/react.jpg" alt="React"></div>
+                                    <div class="fact_icon_4"><p>Dogs are my big passion.</p><br> <img id="fact_pic_4" src="images/dog.png" alt="Dog"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/6.0.3/typeit.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
