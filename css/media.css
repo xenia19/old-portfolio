@@ -7,8 +7,10 @@
 }
 
     .about_me_page {
-        grid-template-columns: 1fr;
-        height: 100vh;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     }
     
      .menu li.active a:after {
